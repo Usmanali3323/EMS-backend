@@ -37,7 +37,7 @@ if(user.role!=="Employee" || "HR" ||"Admin"){
     const cookieOptions = {
       httpOnly: true,
       secure: true,
-      sameSite: "Strict,
+      sameSite: "Strict",
     };
 
     res
