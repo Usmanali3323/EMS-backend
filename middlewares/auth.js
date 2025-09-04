@@ -59,7 +59,7 @@ export default verifyUser;
 
 export const verifyHR = async (req, res, next) => {
   try {
-    console.log(req.cookies.accessToken);
+    console.log("cookies : ",req.cookies.accessToken);
     
     const accessToken =
       req.cookies?.accessToken ||
