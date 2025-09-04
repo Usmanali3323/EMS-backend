@@ -5,7 +5,7 @@ import Employee from "../models/EmployeeProfile.js";
 
 export const verifyUser = async (req, res, next) => {
   try {
-    console.log(req.cookies.accessToken);
+    console.log("cookies : ",req.cookies.accessToken);
     
     const accessToken =
       req.cookies?.accessToken ||
@@ -36,8 +36,8 @@ if(user.role!=="Employee" || "HR" ||"Admin"){
   } catch (error) {
     const cookieOptions = {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
+      secure: true,
+      sameSite: "Strict,
     };
 
     res
