@@ -21,7 +21,7 @@ connectDB();
 //  Middleware to parse JSON 
 app.use(express.json());
 
-const allowedOrigins = 'http://localhost:5173'; // Frontend URL
+const allowedOrigins = 'https://login-ca761.web.app'; // Frontend URL
 
 // Middleware
 app.use(cors({
