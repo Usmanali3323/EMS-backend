@@ -28,7 +28,7 @@ export const verifyUser = async (req, res, next) => {
     if (!user) {
       throw new ApiError(404, {}, "User not found");
     }
-if(user.role!=="Employee" || "HR" ||"Admin"){
+if(user.role!=="Employee" && user.role!=="HR" && user.role!=="Admin"){
     throw new ApiError(401,[],"UnAuthorized User");
 }
     req.employee = user;
