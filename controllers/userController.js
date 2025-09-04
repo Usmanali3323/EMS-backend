@@ -82,7 +82,7 @@ export const loginUser = async (req, res) => {
     const options = {
       httpOnly: true,
       secure: true, // secure only in production
-      sameSite: "Strict",
+      sameSite: "None",
       maxAge: 15 * 60 * 1000 // 15 minutes in ms
     };
 
